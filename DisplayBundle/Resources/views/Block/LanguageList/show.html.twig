@@ -1,7 +1,0 @@
-{% extends 'OpenOrchestraDisplayBundle:Block:layout.html.twig' %}
-
-{% block content %}
-    {% for language,route in routes %}
-        <a href="{{ route }}">{{ ('open_orchestra_display.language_list.' ~ language) | trans }}</a>
-    {% endfor %}
-{% endblock %}

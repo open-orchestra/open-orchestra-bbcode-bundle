@@ -1,7 +1,0 @@
-{% extends 'OpenOrchestraDisplayBundle:Block:layout.html.twig' %}
-
-{% block content %}
-    {% for element in tree_formatter(tree) %}
-        {% include "OpenOrchestraDisplayBundle:Block/Menu:node.html.twig" with {"element": element} only %}
-    {% endfor %}
-{% endblock %}
