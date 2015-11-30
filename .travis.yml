@@ -6,13 +6,8 @@ php:
 cache:
   directories:
     - ~/.composer/cache
-    - ~/composer
 
 sudo: false
-
-cache:
-  directories:
-    - ~/.composer/cache
 
 install:
   - composer install --no-progress --prefer-dist
