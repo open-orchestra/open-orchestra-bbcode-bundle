@@ -16,7 +16,7 @@ interface BBcodeParserInterface
      * 
      * @param array $validators
      */
-	public function loadValidatorsFromConfiguration($validators);
+    public function loadValidatorsFromConfiguration($validators);
 
     /**
      * Add/Override validators described in BBcodeValidatorCollectionInterface
@@ -73,4 +73,13 @@ interface BBcodeParserInterface
      * @return array
      */
     public function getCodes();
+
+    /**
+     * Parses a string of bbcode markup.
+     *
+     * @param string $str
+     *
+     * @return BBcodeParserInterface
+     */
+    public function parse($str)
 }
