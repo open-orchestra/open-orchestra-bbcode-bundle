@@ -81,5 +81,5 @@ interface BBcodeParserInterface
      *
      * @return BBcodeParserInterface
      */
-    public function parse($str)
+    public function parse($str);
 }
