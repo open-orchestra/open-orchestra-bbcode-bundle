@@ -2,12 +2,13 @@
 
 namespace OpenOrchestra\BBcodeBundle\Tests\Definition;
 
+use OpenOrchestra\BaseBundle\Tests\AbstractTest\AbstractBaseTestCase;
 use OpenOrchestra\BBcodeBundle\Definition\BBcodeDefinitionFactory;
 
 /**
  * Class BBcodeDefinitionFactoryTest
  */
-class BBcodeDefinitionFactoryTest extends \PHPUnit_Framework_TestCase
+class BBcodeDefinitionFactoryTest extends AbstractBaseTestCase
 {
     /**
      * @param string $className
