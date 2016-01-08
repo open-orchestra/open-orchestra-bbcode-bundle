@@ -2,13 +2,14 @@
 
 namespace OpenOrchestra\BBcodeBundle\Tests\Definition;
 
+use OpenOrchestra\BaseBundle\Tests\AbstractTest\AbstractBaseTestCase;
 use Phake;
 use OpenOrchestra\BBcodeBundle\Definition\BBcodeDefinition;
 
 /**
  * Class BBcodeDefinitionTest
  */
-class BBcodeDefinitionTest extends \PHPUnit_Framework_TestCase
+class BBcodeDefinitionTest extends AbstractBaseTestCase
 {
     protected $definition;
 

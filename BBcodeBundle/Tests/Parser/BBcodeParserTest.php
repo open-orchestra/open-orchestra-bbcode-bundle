@@ -2,6 +2,7 @@
 
 namespace OpenOrchestra\BBcodeBundle\Tests\Parser;
 
+use OpenOrchestra\BaseBundle\Tests\AbstractTest\AbstractBaseTestCase;
 use Phake;
 use OpenOrchestra\BBcodeBundle\Parser\BBcodeParser;
 use OpenOrchestra\BBcodeBundle\Definition\BBcodeDefinitionCollectionInterface;
@@ -9,7 +10,7 @@ use OpenOrchestra\BBcodeBundle\Definition\BBcodeDefinitionCollectionInterface;
 /**
  * Class BBcodeParserTest
  */
-class BBcodeParserTest extends \PHPUnit_Framework_TestCase
+class BBcodeParserTest extends AbstractBaseTestCase
 {
     protected $parser;
 
