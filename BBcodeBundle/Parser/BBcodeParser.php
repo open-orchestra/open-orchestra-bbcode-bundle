@@ -167,6 +167,7 @@ class BBcodeParser extends Parser implements BBcodeParserInterface
 
             if ($lastElement->isTextNode()) {
                 $lastElement->setValue($lastElement->getValue() . $string);
+
                 return $lastElement;
             }
         }
@@ -174,6 +175,7 @@ class BBcodeParser extends Parser implements BBcodeParserInterface
         $textNode = new $this->textNodeClassName($string);
         $textNode->setNodeId(++$this->nextNodeid);
         $parent->addChild($textNode);
+
         return $textNode;
     }
 
@@ -189,7 +191,6 @@ class BBcodeParser extends Parser implements BBcodeParserInterface
      */
     protected function parseTag(ElementNode $parent, Tokenizer $tokenizer, $tagContent)
     {
-        $next;
         if (!$tokenizer->hasNext() || ($next = $tokenizer->next()) != ']') {
             $this->createTextNode($parent, '[');
             $this->createTextNode($parent, $tagContent);
@@ -199,7 +200,6 @@ class BBcodeParser extends Parser implements BBcodeParserInterface
 
         list($tmpTagName, $options) = $this->parseOptions($tagContent);
 
-        $actualTagName;
         if ('' != $tmpTagName && '/' == $tmpTagName[0]) {
            $actualTagName = substr($tmpTagName, 1);
         } else {
