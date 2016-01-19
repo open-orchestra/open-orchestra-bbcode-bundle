@@ -33,7 +33,7 @@ class BBcodeDefinitionFactory
     public function create(
         $tag, $html, $useOption = false, $parseContent = true,
         $nestLimit = -1, array $optionValidator = array(), InputValidator $bodyValidator = null
-    ){
+    ) {
         return new $this->className($tag, $html, $useOption, $parseContent, $nestLimit, $optionValidator, $bodyValidator);
     }
 }

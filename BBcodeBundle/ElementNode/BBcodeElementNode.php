@@ -43,10 +43,8 @@ class BBcodeElementNode extends ElementNode implements BBcodeElementNodeInterfac
     {
         if ($this->codeDefinition) {
             if ($preview) {
-
                 return $this->codeDefinition->getPreviewHtml($this);
             }
-
             return $this->codeDefinition->getHtml($this);
         }
 

@@ -76,7 +76,6 @@ class BBcodeDefinition extends CodeDefinition implements BBcodeDefinitionInterfa
         }
 
         $content = $this->getPreviewContent($el);
-
         $html = str_ireplace('{param}', $content, $html);
 
         return $html;
