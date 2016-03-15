@@ -10,4 +10,3 @@ open-orchestra-bbcode-bundle
 | VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/5620af1036d0ab0019000831/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5620af1036d0ab0019000831) |
 | Latest Stable Version | [![Latest Stable Version](https://poser.pugx.org/open-orchestra/open-orchestra-bbcode-bundle/v/stable)](https://packagist.org/packages/open-orchestra/open-orchestra-bbcode-bundle) |
 | Total Downloads | [![Total Downloads](https://poser.pugx.org/open-orchestra/open-orchestra-bbcode-bundle/downloads)](https://packagist.org/packages/open-orchestra/open-orchestra-bbcode-bundle) |
- 
