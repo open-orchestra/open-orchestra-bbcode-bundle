@@ -15,10 +15,10 @@
   },
 
   "require-dev": {
-    "phake/phake": "~2.1.0"
+    "phake/phake": "~2.1.0",
     "phpunit/phpunit": "~4.8.0",
 
-    "codeclimate/php-test-reporter": "~0.3.2",
+    "codeclimate/php-test-reporter": "~0.3.2"
   },
 
   "extra": {
