@@ -5,11 +5,11 @@ parameters:
 
 services:
     open_orchestra_bbcode.definition.factory:
-        class: %open_orchestra_bbcode.definition.factory.class%
+        class: '%open_orchestra_bbcode.definition.factory.class%'
         arguments:
-            - %open_orchestra_bbcode.bbcode_definition.class%
+            - '%open_orchestra_bbcode.bbcode_definition.class%'
 
     open_orchestra_bbcode.parser:
-        class: %open_orchestra_bbcode.parser.class%
+        class: '%open_orchestra_bbcode.parser.class%'
         arguments:
-            - @open_orchestra_bbcode.definition.factory
+            - '@open_orchestra_bbcode.definition.factory'
