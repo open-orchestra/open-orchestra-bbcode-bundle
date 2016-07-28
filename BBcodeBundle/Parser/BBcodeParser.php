@@ -6,7 +6,6 @@ use JBBCode\Parser;
 use JBBCode\ElementNode;
 use JBBCode\Tokenizer;
 use OpenOrchestra\BBcodeBundle\ElementNode\BBcodeElementNode;
-use OpenOrchestra\BBcodeBundle\Parser\BBcodeParserInterface;
 use OpenOrchestra\BBcodeBundle\Validator\BBcodeValidatorCollectionInterface;
 use OpenOrchestra\BBcodeBundle\Definition\BBcodeDefinitionCollectionInterface;
 use OpenOrchestra\BBcodeBundle\Definition\BBcodeDefinitionFactory;
