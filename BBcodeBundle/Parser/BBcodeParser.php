@@ -5,7 +5,7 @@ namespace OpenOrchestra\BBcodeBundle\Parser;
 use JBBCode\Parser;
 use JBBCode\ElementNode;
 use JBBCode\Tokenizer;
-use OpenOrchestra\BBcodeBundle\Parser\BBcodeParserInterface;
+use OpenOrchestra\BBcodeBundle\ElementNode\BBcodeElementNode;
 use OpenOrchestra\BBcodeBundle\Validator\BBcodeValidatorCollectionInterface;
 use OpenOrchestra\BBcodeBundle\Definition\BBcodeDefinitionCollectionInterface;
 use OpenOrchestra\BBcodeBundle\Definition\BBcodeDefinitionFactory;
@@ -142,6 +142,21 @@ class BBcodeParser extends Parser implements BBcodeParserInterface
     }
 
     /**
+     * @param string $tagName
+     *
+     * @return array
+     */
+    public function getElementByTagName($tagName)
+    {
+        if (null === $this->treeRoot){
+            return array();
+        }
+        $children = $this->treeRoot->getChildren();
+
+        return $this->getElementByTagInChildren($children, $tagName);
+    }
+
+    /**
      * Removes the old parse tree if one exists.
      */
     protected function reset()
@@ -237,5 +252,27 @@ class BBcodeParser extends Parser implements BBcodeParserInterface
         $parent->addChild($el);
 
         return $el;
+    }
+
+    /**
+     * @param array  $children
+     * @param string $tagName
+     *
+     * @return array
+     */
+    protected function getElementByTagInChildren(array $children, $tagName)
+    {
+        $elements = array();
+
+        foreach ($children as $child) {
+            if ($child instanceof BBcodeElementNode) {
+                if ($tagName === $child->getTagName()) {
+                    $elements[] = $child;
+                }
+                array_merge($elements, $this->getElementByTagInChildren($child->getChildren(), $tagName));
+            }
+        }
+
+        return $elements;
     }
 }

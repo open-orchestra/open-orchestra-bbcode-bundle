@@ -82,4 +82,11 @@ interface BBcodeParserInterface
      * @return BBcodeParserInterface
      */
     public function parse($str);
+
+    /**
+     * @param string $tagName
+     *
+     * @return array
+     */
+    public function getElementByTagName($tagName);
 }
