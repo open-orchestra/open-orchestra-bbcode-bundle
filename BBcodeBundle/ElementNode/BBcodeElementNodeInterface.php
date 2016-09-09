@@ -17,6 +17,13 @@ Interface BBcodeElementNodeInterface
     public function getAsHTML();
 
     /**
+     * Return the element as text with all replacements made
+     *
+     * @return the text representation of this node
+     */
+    public function getAsText();
+
+    /**
      * Return the element as html with all replacements made, in a preview context
      *
      * @return the html representation of this node
